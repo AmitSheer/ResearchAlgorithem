@@ -7,7 +7,5 @@ out_script_name = sys.argv[2]
 
 module = importlib.import_module(in_script_name.removesuffix('.py'))
 print(module.__name__)
-print()
-# print(f'{in_script_name}')
-# print(f'{out_script_name}')
-# print()
+print(module.__doc__)
+print(module.__dir__()[8:])
