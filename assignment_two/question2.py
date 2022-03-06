@@ -30,7 +30,7 @@ def lastcall(func: callable):
             m.add_call(key, val)
             return val
         else:
-            print(f"value already calculated:{m.has_call(key)}")
+            return f"value already calculated:{m.has_call(key)}"
 
     return wrapper
 
