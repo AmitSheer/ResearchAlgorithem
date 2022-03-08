@@ -2,11 +2,6 @@ import importlib
 import sys
 
 
-# sys.path.append('assignment_two')
-# in_script_name: str = sys.argv[1]
-# out_script_name = sys.argv[2]
-
-
 def to_html():
     def getContent(loaded_module):
         content = f"<h1>Module {loaded_module.__name__}</h1> {loaded_module.__doc__}"
@@ -27,7 +22,17 @@ def to_html():
         file.write(html)
 
 
+sys.path.append('assignment_two')
+
 if __name__ == '__main__':
     in_script_name = "module_example"
     out_script_name = "py_to_html.html"
     to_html()
+else:
+    try:
+        in_script_name: str = sys.argv[1]
+        out_script_name = sys.argv[2]
+        to_html()
+    except:
+        in_script_name: str = ""
+        out_script_name = ""
