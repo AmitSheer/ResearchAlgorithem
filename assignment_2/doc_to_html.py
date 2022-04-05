@@ -22,7 +22,7 @@ def to_html():
         file.write(html)
 
 
-sys.path.append('assignment_two')
+sys.path.append('assignment_2')
 
 if __name__ == '__main__':
     in_script_name = "module_example"
